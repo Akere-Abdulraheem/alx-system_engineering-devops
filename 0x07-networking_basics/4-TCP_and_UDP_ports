@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+# Shows PID and name of program each sockets belongs, shows only listening
 Active Internet connections (only servers)
 Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name    
 tcp        0      0 localhost:domain        0.0.0.0:*               LISTEN      3091/systemd-resolv 
