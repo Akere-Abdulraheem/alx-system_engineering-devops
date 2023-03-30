@@ -1,40 +1,6 @@
 #!/usr/bin/env bash
-# Shows PID and name of program each sockets belongs, shows only listening
-Active Internet connections (only servers)
-Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name    
-tcp        0      0 localhost:domain        0.0.0.0:*               LISTEN      3091/systemd-resolv 
-tcp        0      0 0.0.0.0:ssh             0.0.0.0:*               LISTEN      830/sshd: /usr/sbin 
-tcp        0      0 localhost:33060         0.0.0.0:*               LISTEN      3289/mysqld         
-tcp        0      0 localhost:mysql         0.0.0.0:*               LISTEN      3289/mysqld         
-tcp6       0      0 [::]:ssh                [::]:*                  LISTEN      830/sshd: /usr/sbin 
-udp        0      0 localhost:domain        0.0.0.0:*                           3091/systemd-resolv 
-udp        0      0 ubuntu-focal:bootpc     0.0.0.0:*                           656/systemd-network 
-raw6       0      0 [::]:ipv6-icmp          [::]:*                  7           656/systemd-network 
-Active UNIX domain sockets (only servers)
-Proto RefCnt Flags       Type       State         I-Node   PID/Program name     Path
-unix  2      [ ACC ]     SEQPACKET  LISTENING     13776    1/init               /run/udev/control
-unix  2      [ ACC ]     STREAM     LISTENING     29173    1901/systemd         /run/user/1000/systemd/private
-unix  2      [ ACC ]     STREAM     LISTENING     28658    1901/systemd         /run/user/1000/bus
-unix  2      [ ACC ]     STREAM     LISTENING     28659    1901/systemd         /run/user/1000/gnupg/S.dirmngr
-unix  2      [ ACC ]     STREAM     LISTENING     28660    1901/systemd         /run/user/1000/gnupg/S.gpg-agent.browser
-unix  2      [ ACC ]     STREAM     LISTENING     20183    1/init               /var/snap/lxd/common/lxd/unix.socket
-unix  2      [ ACC ]     STREAM     LISTENING     28661    1901/systemd         /run/user/1000/gnupg/S.gpg-agent.extra
-unix  2      [ ACC ]     STREAM     LISTENING     13766    1/init               @/org/kernel/linux/storage/multipathd
-unix  2      [ ACC ]     STREAM     LISTENING     28662    1901/systemd         /run/user/1000/gnupg/S.gpg-agent.ssh
-unix  2      [ ACC ]     STREAM     LISTENING     28663    1901/systemd         /run/user/1000/gnupg/S.gpg-agent
-unix  2      [ ACC ]     STREAM     LISTENING     28664    1901/systemd         /run/user/1000/pk-debconf-socket
-unix  2      [ ACC ]     STREAM     LISTENING     28665    1901/systemd         /run/user/1000/snapd-session-agent.socket
-unix  2      [ ACC ]     STREAM     LISTENING     13753    1/init               /run/systemd/private
-unix  2      [ ACC ]     STREAM     LISTENING     13755    1/init               /run/systemd/userdb/io.systemd.DynamicUser
-unix  2      [ ACC ]     STREAM     LISTENING     13764    1/init               /run/lvm/lvmpolld.socket
-unix  2      [ ACC ]     STREAM     LISTENING     13769    1/init               /run/systemd/fsck.progress
-unix  2      [ ACC ]     STREAM     LISTENING     13771    1/init               /run/systemd/journal/stdout
-unix  2      [ ACC ]     STREAM     LISTENING     14270    344/systemd-journal  /run/systemd/journal/io.systemd.journal
-unix  2      [ ACC ]     STREAM     LISTENING     20180    1/init               /run/dbus/system_bus_socket
-unix  2      [ ACC ]     STREAM     LISTENING     20185    1/init               /run/snapd.socket
-unix  2      [ ACC ]     STREAM     LISTENING     20187    1/init               /run/snapd-snap.socket
-unix  2      [ ACC ]     STREAM     LISTENING     20189    1/init               /run/uuidd/request
-unix  2      [ ACC ]     STREAM     LISTENING     20775    717/irqbalance       /run/irqbalance//irqbalance717.sock
-unix  2      [ ACC ]     STREAM     LISTENING     35955    3289/mysqld          /var/run/mysqld/mysqlx.sock
-unix  2      [ ACC ]     STREAM     LISTENING     35957    3289/mysqld          /var/run/mysqld/mysqld.sock
-unix  2      [ ACC ]     STREAM     LISTENING     20182    1/init               @ISCSIADM_ABSTRACT_NAMESPACE
+# Shows PID and name of program each sockets belongs to
+# displays listening ports only 
+
+sudo netstat -l -p
+
