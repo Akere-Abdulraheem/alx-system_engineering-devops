@@ -1,0 +1,36 @@
+#!/usr/bin/env bash
+# This script is displaying "Best School" 10 times
+
+i=0
+
+while [ $i -le 10 ];
+do
+	if (( $i < 8 || $i == 10 ));
+	then
+		echo ppi
+	fi
+		if (( $i == 9));
+		then
+			echo a
+		fi
+#	fi
+done
+#		break
+#	fi
+
+#if [ $i !=9 ];
+#       then
+#              echo hii
+#               break
+#	fi
+#
+#	if [ $i  ==  ];
+#	then
+#		echo hi
+#		break
+#
+#	fi
+
+#	echo hii
+
+#	((i++))
